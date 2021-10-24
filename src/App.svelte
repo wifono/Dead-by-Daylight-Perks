@@ -77,7 +77,9 @@ $:console.log(searchTerm)
 		{/each}
 
 	{:else}
+	
 	<Info />
+	
 	{/if}
 </main>
 
