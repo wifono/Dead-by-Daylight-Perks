@@ -6,7 +6,7 @@
 	export let description;
 	export let icon_url;
 </script>
-
+<div class="perkbox">
 <div class="perk"
  	transition:scale={{duration: 500, easing:
 	expoInOut}}>
@@ -22,20 +22,27 @@
 	</div>
 
 	<div class="perkmain">
-		<div class="description">{description}</div>
+		<div class="description"><p>{description}</p></div>
 		<img src="{icon_url}" alt="{icon_url}">
 	</div>
 </div>
-
+</div>
 
 <style>
+
+	.perkbox {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 
 	.perk {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: center;
 
-		width: 50rem;
+		width: 80%;
 
 		background: rgba(20, 20, 20, 0.336);
 
@@ -87,7 +94,55 @@
 		width: 80%;
 		padding: 1.5em;
 		text-shadow: 0 0 1em rgb(27, 27, 27);
+		text-align: justify;
 	}
+
+	@media screen and (max-width:1039px) {
+
+		.perk {
+			width: 90%;
+		}
+	}
+
+
+	@media screen and (max-width:820px) {
+
+		.perk {
+			width: 90%;
+		}
+
+        .perkmain {
+			flex-direction:column-reverse;
+		}
+		
+		p {
+			font-size:1em;
+			margin-top: -3rem;
+			padding: 0;
+		}
+
+		img {
+			width:40%;
+			height:100%;
+			margin-top: -2.4rem;
+		}
+
+		h2{
+			font-size: 3rem;
+			padding: 0 1em 0 1em;
+		}
+		p {
+			font-size:1.4em;
+		}
+    }
+
+    @media screen and (max-width:320px) {
+  
+		p {
+			font-size:1.2em;
+		}
+    }
+            
 
 </style>
 

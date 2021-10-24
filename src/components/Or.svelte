@@ -14,4 +14,18 @@
     }
     
 
+    @media screen and (max-width:400px) {
+
+        p {
+            font-size:2em;
+        }
+        
+}
+
+    @media screen and (max-width:320px) {
+        p {
+            font-size:1.7rem;
+        }
+    }
+            
 </style>

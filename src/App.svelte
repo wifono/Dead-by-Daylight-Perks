@@ -97,4 +97,12 @@ $:console.log(searchTerm)
 		;
 	}
 
+	
+    @media screen and (max-width:324px) {
+        .navigation {
+			margin: 0 0 1em 0;
+		}
+    }
+            
+
 </style>

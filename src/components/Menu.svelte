@@ -34,4 +34,30 @@ select:hover {
     color: rgb(179, 0, 0);
     transition: all .2s ease-in;
 }
+
+@media screen and (max-width:580px) {
+
+    select {
+            width: 10rem;
+            font-size:3em
+        }
+			
+}
+
+@media screen and (max-width:400px) {
+
+select {
+        width: 7rem;
+        font-size:2em
+    }
+        
+}
+
+@media screen and (max-width:320px) {
+        select {
+            width: 4rem;
+            font-size:2em
+        }
+    }
+            
 </style>
