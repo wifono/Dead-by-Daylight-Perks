@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 100vw;
+  height: auto;
+  background: linear-gradient(185deg, #660000, #060606);
+  background-size: 400% 400%;
+  -webkit-animation: background 0s ease infinite;
+  -moz-animation: background 0s ease infinite;
+  animation: background 0s ease infinite; }
+
+.logo {
+  margin: 4rem;
+  font-size: 10rem;
+  font-family: "Amatic SC", cursive;
+  color: #f3f3f3; }
+
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1rem; }
+
+.front {
+  color: pink; }
+
+.middle {
+  color: aqua; }
+
+.back {
+  color: greenyellow; }
+
+/*# sourceMappingURL=global.css.map */

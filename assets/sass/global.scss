@@ -1,0 +1,63 @@
+//variables
+
+$logo-font: 'Amatic SC', cursive;
+
+
+// imports
+
+@import "_mixins";
+
+
+//generals
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0;
+    width: 100vw;
+    height: auto;
+
+    @include animatedbg;
+}
+
+
+
+
+// typo
+
+.logo {
+    margin: 4rem;
+    font: {
+        size: 10rem;
+        family: $logo-font;
+    }
+
+    color: rgb(243, 243, 243);
+}
+
+// label
+
+label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1rem;
+}
+
+
+// waving 
+
+.front {
+    color : pink;
+}
+
+.middle {
+    color: aqua;
+}
+
+.back {
+    color: greenyellow;
+}
