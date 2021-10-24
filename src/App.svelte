@@ -8,6 +8,7 @@ import Menu from "./components/Menu.svelte";
 import Search from "./components/Search.svelte";
 import Logo from "./components/Logo.svelte";
 import Or from "./components/Or.svelte";
+import Info from "./components/Info.svelte";
 
 let names =  [];
 let selectedName = "";
@@ -76,13 +77,7 @@ $:console.log(searchTerm)
 		{/each}
 
 	{:else}
-	{#each bookData as {name, perk_name, description, icon_url}}
-	<Book 
-		{name}
-		{perk_name}
-	 	{description}
-		{icon_url} />
-	{/each}
+	<Info />
 	{/if}
 </main>
 
