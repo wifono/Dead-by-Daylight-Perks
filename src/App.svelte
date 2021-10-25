@@ -43,12 +43,14 @@ let searchTerm = "";
 $: if (searchTerm) selectedName = "";
 
 const searchPerks = () => {
-
-	return filteredBooks = bookData.filter(bookObj => {
+	
+		return filteredBooks = bookData.filter(bookObj => {
 		let bookTitleLower = bookObj.perk_name.toLowerCase();
 		return bookTitleLower.includes(searchTerm.toLowerCase());
 	})
 }
+
+
 
 $:console.log(selectedName, filteredBooks);
 $:console.log(searchTerm)
@@ -65,8 +67,11 @@ $:console.log(searchTerm)
 </div>
 
 <main id="bookshelf">
-	{#if searchTerm && filteredBooks.length === 0}
-	<h3>No Results</h3>
+
+	{#if searchTerm.length === 0}
+	
+		<Info id="information" />
+	
 	{:else if filteredBooks.length > 0}
 		{#each filteredBooks as {name, perk_name, description, icon_url}}
 		<Book 
@@ -75,11 +80,9 @@ $:console.log(searchTerm)
 			{description}
 			{icon_url} />
 		{/each}
+	{:else if searchTerm && filteredBooks.length === 0}
+	<h3>No Results</h3>
 
-	{:else}
-	
-	<Info />
-	
 	{/if}
 </main>
 

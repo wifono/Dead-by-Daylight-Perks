@@ -2840,47 +2840,39 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (79:1) {:else}
-    function create_else_block(ctx) {
-    	let info;
-    	let current;
-    	info = new Info({ $$inline: true });
+    // (83:52) 
+    function create_if_block_2(ctx) {
+    	let h3;
 
     	const block = {
     		c: function create() {
-    			create_component(info.$$.fragment);
+    			h3 = element("h3");
+    			h3.textContent = "No Results";
+    			add_location(h3, file, 83, 1, 1731);
     		},
     		m: function mount(target, anchor) {
-    			mount_component(info, target, anchor);
-    			current = true;
+    			insert_dev(target, h3, anchor);
     		},
     		p: noop,
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(info.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(info.$$.fragment, local);
-    			current = false;
-    		},
+    		i: noop,
+    		o: noop,
     		d: function destroy(detaching) {
-    			destroy_component(info, detaching);
+    			if (detaching) detach_dev(h3);
     		}
     	};
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_else_block.name,
-    		type: "else",
-    		source: "(79:1) {:else}",
+    		id: create_if_block_2.name,
+    		type: "if",
+    		source: "(83:52) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (70:36) 
+    // (75:36) 
     function create_if_block_1(ctx) {
     	let each_1_anchor;
     	let current;
@@ -2969,31 +2961,43 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(70:36) ",
+    		source: "(75:36) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (68:1) {#if searchTerm && filteredBooks.length === 0}
+    // (71:1) {#if searchTerm.length === 0}
     function create_if_block(ctx) {
-    	let h3;
+    	let info;
+    	let current;
+
+    	info = new Info({
+    			props: { id: "information" },
+    			$$inline: true
+    		});
 
     	const block = {
     		c: function create() {
-    			h3 = element("h3");
-    			h3.textContent = "No Results";
-    			add_location(h3, file, 68, 1, 1475);
+    			create_component(info.$$.fragment);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, h3, anchor);
+    			mount_component(info, target, anchor);
+    			current = true;
     		},
     		p: noop,
-    		i: noop,
-    		o: noop,
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(info.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(info.$$.fragment, local);
+    			current = false;
+    		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(h3);
+    			destroy_component(info, detaching);
     		}
     	};
 
@@ -3001,14 +3005,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(68:1) {#if searchTerm && filteredBooks.length === 0}",
+    		source: "(71:1) {#if searchTerm.length === 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (71:2) {#each filteredBooks as {name, perk_name, description, icon_url}}
+    // (76:2) {#each filteredBooks as {name, perk_name, description, icon_url}}
     function create_each_block(ctx) {
     	let book;
     	let current;
@@ -3057,7 +3061,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(71:2) {#each filteredBooks as {name, perk_name, description, icon_url}}",
+    		source: "(76:2) {#each filteredBooks as {name, perk_name, description, icon_url}}",
     		ctx
     	});
 
@@ -3110,17 +3114,19 @@ var app = (function () {
     	search = new Search({ props: search_props, $$inline: true });
     	binding_callbacks.push(() => bind(search, 'searchTerm', search_searchTerm_binding));
     	search.$on("input", /*searchPerks*/ ctx[4]);
-    	const if_block_creators = [create_if_block, create_if_block_1, create_else_block];
+    	const if_block_creators = [create_if_block, create_if_block_1, create_if_block_2];
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (/*searchTerm*/ ctx[2] && /*filteredBooks*/ ctx[1].length === 0) return 0;
+    		if (/*searchTerm*/ ctx[2].length === 0) return 0;
     		if (/*filteredBooks*/ ctx[1].length > 0) return 1;
-    		return 2;
+    		if (/*searchTerm*/ ctx[2] && /*filteredBooks*/ ctx[1].length === 0) return 2;
+    		return -1;
     	}
 
-    	current_block_type_index = select_block_type(ctx);
-    	if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    	if (~(current_block_type_index = select_block_type(ctx))) {
+    		if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    	}
 
     	const block = {
     		c: function create() {
@@ -3135,12 +3141,12 @@ var app = (function () {
     			create_component(search.$$.fragment);
     			t3 = space();
     			main = element("main");
-    			if_block.c();
-    			add_location(header, file, 56, 0, 1247);
+    			if (if_block) if_block.c();
+    			add_location(header, file, 58, 0, 1251);
     			attr_dev(div, "class", "navigation svelte-2fgw02");
-    			add_location(div, file, 60, 0, 1277);
+    			add_location(div, file, 62, 0, 1281);
     			attr_dev(main, "id", "bookshelf");
-    			add_location(main, file, 66, 0, 1404);
+    			add_location(main, file, 68, 0, 1408);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3157,7 +3163,11 @@ var app = (function () {
     			mount_component(search, div, null);
     			insert_dev(target, t3, anchor);
     			insert_dev(target, main, anchor);
-    			if_blocks[current_block_type_index].m(main, null);
+
+    			if (~current_block_type_index) {
+    				if_blocks[current_block_type_index].m(main, null);
+    			}
+
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
@@ -3184,26 +3194,35 @@ var app = (function () {
     			current_block_type_index = select_block_type(ctx);
 
     			if (current_block_type_index === previous_block_index) {
-    				if_blocks[current_block_type_index].p(ctx, dirty);
+    				if (~current_block_type_index) {
+    					if_blocks[current_block_type_index].p(ctx, dirty);
+    				}
     			} else {
-    				group_outros();
+    				if (if_block) {
+    					group_outros();
 
-    				transition_out(if_blocks[previous_block_index], 1, 1, () => {
-    					if_blocks[previous_block_index] = null;
-    				});
+    					transition_out(if_blocks[previous_block_index], 1, 1, () => {
+    						if_blocks[previous_block_index] = null;
+    					});
 
-    				check_outros();
-    				if_block = if_blocks[current_block_type_index];
-
-    				if (!if_block) {
-    					if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
-    					if_block.c();
-    				} else {
-    					if_block.p(ctx, dirty);
+    					check_outros();
     				}
 
-    				transition_in(if_block, 1);
-    				if_block.m(main, null);
+    				if (~current_block_type_index) {
+    					if_block = if_blocks[current_block_type_index];
+
+    					if (!if_block) {
+    						if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    						if_block.c();
+    					} else {
+    						if_block.p(ctx, dirty);
+    					}
+
+    					transition_in(if_block, 1);
+    					if_block.m(main, null);
+    				} else {
+    					if_block = null;
+    				}
     			}
     		},
     		i: function intro(local) {
@@ -3233,7 +3252,10 @@ var app = (function () {
     			destroy_component(search);
     			if (detaching) detach_dev(t3);
     			if (detaching) detach_dev(main);
-    			if_blocks[current_block_type_index].d();
+
+    			if (~current_block_type_index) {
+    				if_blocks[current_block_type_index].d();
+    			}
     		}
     	};
 
