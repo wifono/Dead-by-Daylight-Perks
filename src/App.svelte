@@ -30,13 +30,13 @@ const getPerkByName = () => {
 
 	searchTerm = "";
 
-	if (selectedName === 'all') {
-		return filteredBooks = [];
+	if (selectedName === 'All') {
+		return filteredBooks = bookData;
+	
 	}
 	return filteredBooks = bookData.filter(bookObj => {
 		return bookObj.name === selectedName;
 	})
-	
 }
 // Search input
 let searchTerm = "";
@@ -68,9 +68,9 @@ $:console.log(searchTerm)
 
 <main id="bookshelf">
 
-	{#if searchTerm.length === 0}
+	{#if  searchTerm.length === 0 && selectedName.length === 0}
 	
-		<Info id="information" />
+		<Info />
 	
 	{:else if filteredBooks.length > 0}
 		{#each filteredBooks as {name, perk_name, description, icon_url}}

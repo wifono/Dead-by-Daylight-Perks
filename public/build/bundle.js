@@ -2504,9 +2504,9 @@ var app = (function () {
     			attr_dev(input, "placeholder", "Type");
     			attr_dev(input, "autocomplete", "off");
     			attr_dev(input, "class", "svelte-fjya5v");
-    			add_location(input, file$4, 7, 4, 81);
+    			add_location(input, file$4, 11, 4, 148);
     			attr_dev(div, "class", "search");
-    			add_location(div, file$4, 5, 0, 53);
+    			add_location(div, file$4, 9, 0, 120);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2554,6 +2554,7 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Search', slots, []);
     	let { searchTerm } = $$props;
+    	let selected = document.getElementById('search-field');
     	const writable_props = ['searchTerm'];
 
     	Object.keys($$props).forEach(key => {
@@ -2573,10 +2574,11 @@ var app = (function () {
     		if ('searchTerm' in $$props) $$invalidate(0, searchTerm = $$props.searchTerm);
     	};
 
-    	$$self.$capture_state = () => ({ searchTerm });
+    	$$self.$capture_state = () => ({ searchTerm, selected });
 
     	$$self.$inject_state = $$props => {
     		if ('searchTerm' in $$props) $$invalidate(0, searchTerm = $$props.searchTerm);
+    		if ('selected' in $$props) selected = $$props.selected;
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -2848,7 +2850,7 @@ var app = (function () {
     		c: function create() {
     			h3 = element("h3");
     			h3.textContent = "No Results";
-    			add_location(h3, file, 83, 1, 1731);
+    			add_location(h3, file, 83, 1, 1750);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h3, anchor);
@@ -2968,15 +2970,11 @@ var app = (function () {
     	return block;
     }
 
-    // (71:1) {#if searchTerm.length === 0}
+    // (71:1) {#if  searchTerm.length === 0 && selectedName.length === 0}
     function create_if_block(ctx) {
     	let info;
     	let current;
-
-    	info = new Info({
-    			props: { id: "information" },
-    			$$inline: true
-    		});
+    	info = new Info({ $$inline: true });
 
     	const block = {
     		c: function create() {
@@ -3005,7 +3003,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(71:1) {#if searchTerm.length === 0}",
+    		source: "(71:1) {#if  searchTerm.length === 0 && selectedName.length === 0}",
     		ctx
     	});
 
@@ -3118,7 +3116,7 @@ var app = (function () {
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (/*searchTerm*/ ctx[2].length === 0) return 0;
+    		if (/*searchTerm*/ ctx[2].length === 0 && /*selectedName*/ ctx[0].length === 0) return 0;
     		if (/*filteredBooks*/ ctx[1].length > 0) return 1;
     		if (/*searchTerm*/ ctx[2] && /*filteredBooks*/ ctx[1].length === 0) return 2;
     		return -1;
@@ -3142,11 +3140,11 @@ var app = (function () {
     			t3 = space();
     			main = element("main");
     			if (if_block) if_block.c();
-    			add_location(header, file, 58, 0, 1251);
+    			add_location(header, file, 58, 0, 1257);
     			attr_dev(div, "class", "navigation svelte-2fgw02");
-    			add_location(div, file, 62, 0, 1281);
+    			add_location(div, file, 62, 0, 1287);
     			attr_dev(main, "id", "bookshelf");
-    			add_location(main, file, 68, 0, 1408);
+    			add_location(main, file, 68, 0, 1414);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3293,8 +3291,8 @@ var app = (function () {
     	const getPerkByName = () => {
     		$$invalidate(2, searchTerm = "");
 
-    		if (selectedName === 'all') {
-    			return $$invalidate(1, filteredBooks = []);
+    		if (selectedName === 'All') {
+    			return $$invalidate(1, filteredBooks = bookData);
     		}
 
     		return $$invalidate(1, filteredBooks = bookData.filter(bookObj => {

@@ -1,6 +1,10 @@
 <script>
     export let searchTerm;
 
+    let selected = document.getElementById('search-field');
+
+
+
 </script>
 
 <div class="search">
