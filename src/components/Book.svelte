@@ -115,9 +115,9 @@
 			flex-direction:column-reverse;
 		}
 		
-		p {
-			font-size:1em;
-			margin-top: -3rem;
+		.description {
+			font-size: 1rem;
+			margin-top: -2rem;
 			padding: 0;
 		}
 
@@ -135,6 +135,15 @@
 			font-size:1.4em;
 		}
     }
+
+	@media screen and (max-width:420px) {
+  
+  p {
+	  font-size: 1.3rem;
+	  text-align: left;
+  }
+}
+	  
 
     @media screen and (max-width:320px) {
   

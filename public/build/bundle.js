@@ -2033,29 +2033,29 @@ var app = (function () {
     			t4 = text(/*description*/ ctx[2]);
     			t5 = space();
     			img = element("img");
-    			attr_dev(h2, "class", "svelte-1n5wgry");
+    			attr_dev(h2, "class", "svelte-dp9ozf");
     			add_location(h2, file$6, 16, 3, 363);
     			attr_dev(div0, "class", "perkname");
     			add_location(div0, file$6, 15, 2, 336);
-    			attr_dev(h3, "class", "svelte-1n5wgry");
+    			attr_dev(h3, "class", "svelte-dp9ozf");
     			add_location(h3, file$6, 20, 24, 426);
     			attr_dev(div1, "class", "survname");
     			add_location(div1, file$6, 20, 2, 404);
-    			attr_dev(div2, "class", "perkheader svelte-1n5wgry");
+    			attr_dev(div2, "class", "perkheader svelte-dp9ozf");
     			add_location(div2, file$6, 13, 1, 306);
-    			attr_dev(p, "class", "svelte-1n5wgry");
+    			attr_dev(p, "class", "svelte-dp9ozf");
     			add_location(p, file$6, 24, 27, 512);
-    			attr_dev(div3, "class", "description svelte-1n5wgry");
+    			attr_dev(div3, "class", "description svelte-dp9ozf");
     			add_location(div3, file$6, 24, 2, 487);
     			if (!src_url_equal(img.src, img_src_value = /*icon_url*/ ctx[3])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*icon_url*/ ctx[3]);
-    			attr_dev(img, "class", "svelte-1n5wgry");
+    			attr_dev(img, "class", "svelte-dp9ozf");
     			add_location(img, file$6, 25, 2, 542);
-    			attr_dev(div4, "class", "perkmain svelte-1n5wgry");
+    			attr_dev(div4, "class", "perkmain svelte-dp9ozf");
     			add_location(div4, file$6, 23, 1, 461);
-    			attr_dev(div5, "class", "perk svelte-1n5wgry");
+    			attr_dev(div5, "class", "perk svelte-dp9ozf");
     			add_location(div5, file$6, 9, 0, 224);
-    			attr_dev(div6, "class", "perkbox svelte-1n5wgry");
+    			attr_dev(div6, "class", "perkbox svelte-dp9ozf");
     			add_location(div6, file$6, 8, 0, 201);
     		},
     		l: function claim(nodes) {
@@ -2629,7 +2629,7 @@ var app = (function () {
     		c: function create() {
     			h1 = element("h1");
     			h1.textContent = `${/*setTitle*/ ctx[0]}`;
-    			attr_dev(h1, "class", "svelte-1d5dtm7");
+    			attr_dev(h1, "class", "svelte-18unhlx");
     			add_location(h1, file$3, 5, 0, 54);
     		},
     		l: function claim(nodes) {
@@ -2772,9 +2772,9 @@ var app = (function () {
     			div = element("div");
     			p = element("p");
     			p.textContent = "Select character or type...";
-    			attr_dev(p, "class", "svelte-nt7n25");
+    			attr_dev(p, "class", "svelte-1pzqvj6");
     			add_location(p, file$1, 2, 0, 48);
-    			attr_dev(div, "class", "infocontainer svelte-nt7n25");
+    			attr_dev(div, "class", "infocontainer svelte-1pzqvj6");
     			add_location(div, file$1, 1, 0, 19);
     		},
     		l: function claim(nodes) {

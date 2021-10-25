@@ -20,14 +20,14 @@
     @media screen and (max-width:420px) {
         
         p {
-            font-size: 3rem;
+            font-size: 2rem;
         }
     }
 
     @media screen and (max-width:320px) {
         
         p {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
     }
             
