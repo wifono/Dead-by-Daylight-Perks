@@ -9,6 +9,7 @@ import Search from "./components/Search.svelte";
 import Logo from "./components/Logo.svelte";
 import Or from "./components/Or.svelte";
 import Info from "./components/Info.svelte";
+import Error from "./components/Error.svelte";
 
 let names =  [];
 let selectedName = "";
@@ -81,7 +82,7 @@ $:console.log(searchTerm)
 			{icon_url} />
 		{/each}
 	{:else if searchTerm && filteredBooks.length === 0}
-	<h3>No Results</h3>
+	<Error />
 
 	{/if}
 </main>
