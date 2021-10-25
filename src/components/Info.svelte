@@ -16,4 +16,19 @@
         width: 100%;
         height: 100vh;
     }
+
+    @media screen and (max-width:420px) {
+        
+        p {
+            font-size: 3rem;
+        }
+    }
+
+    @media screen and (max-width:320px) {
+        
+        p {
+            font-size: 2rem;
+        }
+    }
+            
 </style>

@@ -1,10 +1,6 @@
 <script>
     export let searchTerm;
 
-    let selected = document.getElementById('search-field');
-
-
-
 </script>
 
 <div class="search">
@@ -50,9 +46,9 @@
             
     }
 
-    @media screen and (max-width:400px) {
+    @media screen and (max-width:420px) {
 
-input {
+    input {
         width: 7rem;
         font-size:2em
     }
@@ -61,7 +57,7 @@ input {
 
     @media screen and (max-width:320px) {
         input {
-            width: 3.5rem;
+            width: 5rem;
             font-size:2em
         }
     }

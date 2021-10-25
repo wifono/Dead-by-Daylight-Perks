@@ -16,5 +16,12 @@
  }
     
   
+ @media screen and (max-width:420px) {
+
+    h1 {
+    font-size:6rem;
+}
+
+}
     
 </style>

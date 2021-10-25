@@ -2264,6 +2264,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*name*/ ctx[3];
     			option.value = option.__value;
+    			attr_dev(option, "class", "svelte-mmcd9b");
     			add_location(option, file$5, 11, 8, 329);
     		},
     		m: function mount(target, anchor) {
@@ -2326,11 +2327,13 @@ var app = (function () {
     			option0.selected = true;
     			option0.__value = "";
     			option0.value = option0.__value;
+    			attr_dev(option0, "class", "svelte-mmcd9b");
     			add_location(option0, file$5, 7, 8, 188);
     			option1.__value = "All";
     			option1.value = option1.__value;
+    			attr_dev(option1, "class", "svelte-mmcd9b");
     			add_location(option1, file$5, 8, 8, 248);
-    			attr_dev(select, "class", "menu svelte-doiykm");
+    			attr_dev(select, "class", "menu svelte-mmcd9b");
     			attr_dev(select, "name", "menu");
     			attr_dev(select, "id", "menu");
     			if (/*selectedName*/ ctx[0] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[2].call(select));
@@ -2503,10 +2506,10 @@ var app = (function () {
     			attr_dev(input, "id", "search-field");
     			attr_dev(input, "placeholder", "Type");
     			attr_dev(input, "autocomplete", "off");
-    			attr_dev(input, "class", "svelte-fjya5v");
-    			add_location(input, file$4, 11, 4, 148);
+    			attr_dev(input, "class", "svelte-lm5d8a");
+    			add_location(input, file$4, 7, 4, 81);
     			attr_dev(div, "class", "search");
-    			add_location(div, file$4, 9, 0, 120);
+    			add_location(div, file$4, 5, 0, 53);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2554,7 +2557,6 @@ var app = (function () {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('Search', slots, []);
     	let { searchTerm } = $$props;
-    	let selected = document.getElementById('search-field');
     	const writable_props = ['searchTerm'];
 
     	Object.keys($$props).forEach(key => {
@@ -2574,11 +2576,10 @@ var app = (function () {
     		if ('searchTerm' in $$props) $$invalidate(0, searchTerm = $$props.searchTerm);
     	};
 
-    	$$self.$capture_state = () => ({ searchTerm, selected });
+    	$$self.$capture_state = () => ({ searchTerm });
 
     	$$self.$inject_state = $$props => {
     		if ('searchTerm' in $$props) $$invalidate(0, searchTerm = $$props.searchTerm);
-    		if ('selected' in $$props) selected = $$props.selected;
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -2628,7 +2629,7 @@ var app = (function () {
     		c: function create() {
     			h1 = element("h1");
     			h1.textContent = `${/*setTitle*/ ctx[0]}`;
-    			attr_dev(h1, "class", "svelte-u0bayr");
+    			attr_dev(h1, "class", "svelte-1d5dtm7");
     			add_location(h1, file$3, 5, 0, 54);
     		},
     		l: function claim(nodes) {
@@ -2704,7 +2705,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = "or";
-    			attr_dev(p, "class", "svelte-8enr93");
+    			attr_dev(p, "class", "svelte-1ma0763");
     			add_location(p, file$2, 4, 0, 25);
     		},
     		l: function claim(nodes) {
@@ -2771,9 +2772,9 @@ var app = (function () {
     			div = element("div");
     			p = element("p");
     			p.textContent = "Select character or type...";
-    			attr_dev(p, "class", "svelte-nufh5p");
+    			attr_dev(p, "class", "svelte-nt7n25");
     			add_location(p, file$1, 2, 0, 48);
-    			attr_dev(div, "class", "infocontainer svelte-nufh5p");
+    			attr_dev(div, "class", "infocontainer svelte-nt7n25");
     			add_location(div, file$1, 1, 0, 19);
     		},
     		l: function claim(nodes) {

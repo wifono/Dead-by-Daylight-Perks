@@ -35,6 +35,13 @@ select:hover {
     transition: all .2s ease-in;
 }
 
+option {
+    font-size: 1.5rem;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
 @media screen and (max-width:580px) {
 
     select {
@@ -44,7 +51,7 @@ select:hover {
 			
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:420px) {
 
 select {
         width: 7rem;
@@ -55,7 +62,7 @@ select {
 
 @media screen and (max-width:320px) {
         select {
-            width: 4rem;
+            width: 5rem;
             font-size:2em
         }
     }
