@@ -2033,29 +2033,29 @@ var app = (function () {
     			t4 = text(/*description*/ ctx[2]);
     			t5 = space();
     			img = element("img");
-    			attr_dev(h2, "class", "svelte-dp9ozf");
+    			attr_dev(h2, "class", "svelte-1eiggq");
     			add_location(h2, file$7, 16, 3, 363);
     			attr_dev(div0, "class", "perkname");
     			add_location(div0, file$7, 15, 2, 336);
-    			attr_dev(h3, "class", "svelte-dp9ozf");
+    			attr_dev(h3, "class", "svelte-1eiggq");
     			add_location(h3, file$7, 20, 24, 426);
     			attr_dev(div1, "class", "survname");
     			add_location(div1, file$7, 20, 2, 404);
-    			attr_dev(div2, "class", "perkheader svelte-dp9ozf");
+    			attr_dev(div2, "class", "perkheader svelte-1eiggq");
     			add_location(div2, file$7, 13, 1, 306);
-    			attr_dev(p, "class", "svelte-dp9ozf");
+    			attr_dev(p, "class", "svelte-1eiggq");
     			add_location(p, file$7, 24, 27, 512);
-    			attr_dev(div3, "class", "description svelte-dp9ozf");
+    			attr_dev(div3, "class", "description svelte-1eiggq");
     			add_location(div3, file$7, 24, 2, 487);
     			if (!src_url_equal(img.src, img_src_value = /*icon_url*/ ctx[3])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", /*icon_url*/ ctx[3]);
-    			attr_dev(img, "class", "svelte-dp9ozf");
+    			attr_dev(img, "class", "svelte-1eiggq");
     			add_location(img, file$7, 25, 2, 542);
-    			attr_dev(div4, "class", "perkmain svelte-dp9ozf");
+    			attr_dev(div4, "class", "perkmain svelte-1eiggq");
     			add_location(div4, file$7, 23, 1, 461);
-    			attr_dev(div5, "class", "perk svelte-dp9ozf");
+    			attr_dev(div5, "class", "perk svelte-1eiggq");
     			add_location(div5, file$7, 9, 0, 224);
-    			attr_dev(div6, "class", "perkbox svelte-dp9ozf");
+    			attr_dev(div6, "class", "perkbox svelte-1eiggq");
     			add_location(div6, file$7, 8, 0, 201);
     		},
     		l: function claim(nodes) {

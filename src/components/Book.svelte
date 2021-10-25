@@ -137,13 +137,23 @@
     }
 
 	@media screen and (max-width:420px) {
-  
-  p {
-	  font-size: 1.3rem;
-	  text-align: left;
-  }
+		
+		h2 {
+			font-size: 2.2rem;
+			margin: 1rem 0 -.5rem 0;
+		}
+
+		h3 {
+			font-size: 2rem;
+		}
+
+
+	p {
+		font-size: 1.3rem;
+		text-align: left;
+	}
 }
-	  
+		
 
     @media screen and (max-width:320px) {
   
