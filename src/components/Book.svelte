@@ -34,6 +34,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		margin-bottom: 1rem;
+		margin-top: 2rem;
 	}
 
 	.perk {
@@ -42,9 +44,11 @@
 		align-items: center;
 		justify-content: center;
 
-		width: 80%;
+		width: 70%;
 
 		background: rgba(20, 20, 20, 0.336);
+        box-shadow: 0 0 2rem rgb(12, 12, 12);
+		border-radius: 1em;
 
 		margin: 0 0 .5em 0;
 		font-family: "Amatic SC", cursive;

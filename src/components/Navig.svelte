@@ -6,6 +6,7 @@
 	<nav>
 		<a href="/#/">Home</a>
 		<a href="#/reports">Bug Reports</a>
+		<a href="#/about">About</a>
 	</nav>
 </div>
 

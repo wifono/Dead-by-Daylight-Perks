@@ -13,15 +13,14 @@
     font-family: "Amatic SC", cursive;
     color: rgb(240, 240, 240);		
     text-shadow: 0 0 .2em rgb(10, 10, 10);
-    margin-top: 4rem;
-    transition: all .2s ease-in;
+    margin-top: 4.5rem;
  }
     
   
  @media screen and (max-width:420px) {
 
     h1 {
-    margin-top: 6.5rem;
+    margin-top: 0;
 
 }
 

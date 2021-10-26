@@ -11,7 +11,6 @@ import Logo from "./components/Logo.svelte";
 import Or from "./components/Or.svelte";
 import Info from "./components/Info.svelte";
 import Error from "./components/Error.svelte";
-import { flip } from 'svelte/animate'
 
 let names =  [];
 let selectedName = "";
@@ -59,6 +58,8 @@ $:console.log(selectedName, filteredBooks);
 $:console.log(searchTerm)
 </script>
 
+<body class="animate__animated animate__fadeIn">
+
 <header>
 	<Logo />
 </header>
@@ -88,8 +89,7 @@ $:console.log(searchTerm)
 
 	{/if}
 </main>
-
-
+</body>
 <style>
 	.navigation {
 		width: 50vw;

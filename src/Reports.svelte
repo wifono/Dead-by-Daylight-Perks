@@ -3,11 +3,17 @@
     import Reporter from "./components/Reporter.svelte";
 </script>  
 
+<body class="animate__animated animate__fadeIn">
+
 <header>
-	<Logo />
+    <Logo />
 </header>
 
-<Reporter />
+
+<main>
+    <Reporter />
+</main>
+</body>
 
 <style>
     

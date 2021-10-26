@@ -55,10 +55,11 @@
         justify-content: center;
         align-items: center;
 
-        background: rgba(7, 7, 7, 0.301);
+		background: rgba(20, 20, 20, 0.336);
         padding: 1.5rem;
         max-width:30rem;
         margin-bottom: 1em;
+        box-shadow: 0 0 2rem rgb(12, 12, 12);
 
     }
 
