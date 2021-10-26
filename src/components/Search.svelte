@@ -33,5 +33,33 @@
 
     input:hover {
         color: rgb(179, 0, 0);
-        transition: all .2s ease-in;
-}</style>
+        transition: all .2s ease-in;       
+} 
+
+        
+    @media screen and (max-width:580px) {
+
+    input {
+            width: 10rem;
+            font-size:3em
+        }
+            
+    }
+
+    @media screen and (max-width:420px) {
+
+    input {
+        width: 7rem;
+        font-size:2em
+    }
+        
+}
+
+    @media screen and (max-width:320px) {
+        input {
+            width: 5rem;
+            font-size:2em
+        }
+    }
+            
+</style>

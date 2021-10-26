@@ -34,4 +34,37 @@ select:hover {
     color: rgb(179, 0, 0);
     transition: all .2s ease-in;
 }
+
+option {
+    font-size: 1.5rem;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+@media screen and (max-width:580px) {
+
+    select {
+            width: 10rem;
+            font-size:3em
+        }
+			
+}
+
+@media screen and (max-width:420px) {
+
+select {
+        width: 7rem;
+        font-size:2em
+    }
+        
+}
+
+@media screen and (max-width:320px) {
+        select {
+            width: 5rem;
+            font-size:2em
+        }
+    }
+            
 </style>
