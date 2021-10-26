@@ -20,7 +20,7 @@
  @media screen and (max-width:420px) {
 
     h1 {
-    margin-top: 0;
+    margin-top: -1em;
 
 }
 
