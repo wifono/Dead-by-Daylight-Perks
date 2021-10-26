@@ -4,10 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
-  height: auto;
-  background: linear-gradient(185deg, #242424, #060606);
-  background-size: 100%;
-  -webkit-animation: background 0s ease infinite;
-  -moz-animation: background 0s ease infinite;
-  animation: background 0s ease infinite; }
-/*# sourceMappingURL=global.css.map */
+  min-height: 100vh;
+  background: rgb(29, 29, 29);
+  background-size: cover;
+}
