@@ -14,13 +14,14 @@
 
     .infocontainer {
         width: 100%;
-        height: 100vh;
+        margin-top: -5rem;
     }
 
     @media screen and (max-width:420px) {
         
         p {
             font-size: 2rem;
+            margin-top: 5rem;
         }
     }
 
