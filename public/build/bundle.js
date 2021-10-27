@@ -3843,7 +3843,7 @@ var app = (function () {
     		c: function create() {
     			h1 = element("h1");
     			h1.textContent = `${/*setTitle*/ ctx[0]}`;
-    			attr_dev(h1, "class", "svelte-1sae7fv");
+    			attr_dev(h1, "class", "svelte-1x3ychs");
     			add_location(h1, file$9, 5, 0, 54);
     		},
     		l: function claim(nodes) {
@@ -4901,7 +4901,6 @@ var app = (function () {
     			t = space();
     			main = element("main");
     			create_component(reporter.$$.fragment);
-    			attr_dev(header, "class", "svelte-ns8fh1");
     			add_location(header, file$3, 7, 0, 185);
     			add_location(main, file$3, 12, 0, 224);
     			attr_dev(body, "class", "animate__animated animate__fadeIn");
