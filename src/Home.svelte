@@ -54,8 +54,8 @@ const searchPerks = () => {
 
 
 
-$:console.log(selectedName, filteredBooks);
-$:console.log(searchTerm)
+//$:console.log(selectedName, filteredBooks);
+//$:console.log(searchTerm)
 </script>
 
 <body class="animate__animated animate__fadeIn">

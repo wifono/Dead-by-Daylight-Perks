@@ -7,7 +7,11 @@
 <div class="container">
 
     <h1> Me </h1>
-    <img src="ja.png" alt="#">
+
+    <div class="white">
+        <img src="ja.png" alt="#">
+    </div>
+
     <p>"Život je lajf."</p>
 
 </div>
@@ -20,7 +24,7 @@
         max-width: 20em;
         height: 20em;
 
-		background: rgba(236, 236, 236, 0.973);
+		background: rgba(51, 51, 51, 0.973);
         box-shadow: 0 0 2rem rgb(12, 12, 12);
         
         font-family: "Amatic SC", cursive;
@@ -29,31 +33,39 @@
         justify-content: center;
         align-items: center;
 
-        border: .3rem solid black;
+        border: .3rem solid rgb(14, 14, 14);
+        border-radius: .3em;
 
         cursor: pointer;
     }
 
     img {
-        width: 55%;
-        margin-top: -3rem;
-
-        border: .3rem solid rgb(14, 14, 14);
-    }
+        width: 100%;
+        }
 
     h1 {
 		color: rgb(110, 41, 175);
         font-size: 4em;
-        margin-top: .2em;
+        margin-top: .8rem;
+        margin-bottom: 0;
 
         
     }
     p {
         
         font-size: 2em;
-        color: rgb(26, 26, 26);
+        color: aliceblue;
         margin-top: .2em;
         font-weight: 900;
+    }
+
+    .white {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        width: 55%;
+        border: .5rem solid rgb(14, 14, 14);
     }
 
 </style>

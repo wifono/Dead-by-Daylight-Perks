@@ -1,6 +1,5 @@
 <script>
-    let setTitle = "Perks";
-
+    let setTitle = 'Perks';
 </script>
 
 <h1> {setTitle}</h1>
