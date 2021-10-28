@@ -5,7 +5,7 @@
 <div class="nav-container">
 	<nav>
 		<a href="/#/">Home</a>
-		<a href="#/reports">Bug Reports</a>
+		<a href="#/reports">Bug Report</a>
 		<a href="#/about">About</a>
 	</nav>
 </div>

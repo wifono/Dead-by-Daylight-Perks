@@ -4,7 +4,10 @@
 	import Report from './Reports.svelte';
 	import Navig from './components/Navig.svelte';
 	import About from './About.svelte';
+	
 </script>
+
+
 
 <Navig />
 

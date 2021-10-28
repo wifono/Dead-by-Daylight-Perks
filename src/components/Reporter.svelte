@@ -9,11 +9,11 @@
     <p>If u find bugs like missing image, any other visual<br> 
     or function bug, describe your problem here:</p>
 
-    <form action="" name="reporter" type="submit">
+    <form action="" name="reporter">
 
         <div class="name">
             <label for="Username">Username</label>
-            <input type="text" id="username" name="username" required>
+            <input type="text" id="username" name="username" equired>
 
             <label class="emailname" for="E-mail">E-mail</label>
             <input class="email" type="text" id="email" name="email" required>
@@ -23,7 +23,7 @@
             <label for="Bug">Describe your problem:</label>
             <input class="bug" type="text" id="bug" name="bug" required>
         </div>
-            <input type="submit" value="Submit" method="post">
+            <input type="submit" value="Submit">
         
     </form>
 
@@ -191,7 +191,13 @@
     .bug {
        width: 15rem;
    }
+
+   .notworking {
+       font-size: 1.6rem;
+       text-align: center;
+   }
 }
+
 
 
 </style>
