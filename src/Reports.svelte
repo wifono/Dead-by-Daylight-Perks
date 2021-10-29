@@ -1,6 +1,8 @@
 <script>
     import Reporter from "./components/Reporter.svelte";
-</script>  
+    import Report from "./components/Report.svelte";
+
+    </script>  
 
 <body class="animate__animated animate__fadeIn">
 
@@ -10,11 +12,38 @@
 
 
 <main>
-    <Reporter />
+    <div class="reporter">
+        <Reporter />
+    </div>
+
+    <div class="reports">
+        <Report />
+        <Report />
+        <Report />
+    </div>
 </main>
 </body>
 
 <style>
+
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        justify-content:center;
+        align-items: flex-start;
+
+         gap: 1rem;
+    }
+
+.reports {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 2rem 0 0 0;
+}
 
 h1 {
     margin: 1rem;

@@ -1,34 +1,47 @@
 <script>
 
+
+    const onSubmit = (event) => {
+        const formData = new FormData(event.target);
+
+        let data = {};
+            for (let field of formData) {
+                const [key, value] = field;
+                data[key] = JSON.stringify(value);
+
+                console.log(field);
+    }
+}
+
 </script>
 
-    <h2 class="notworking">Reports aren't working right now.</h2>
+<div class="reporter">
 
-<div class="reportcontainer">
+        <h2 class="notworking">Reports aren't working right now.</h2>
 
-    <p>If u find bugs like missing image, any other visual<br> 
-    or function bug, describe your problem here:</p>
+    <div class="reportcontainer">
 
-    <form action="" name="reporter">
+        <p>If u find bugs like missing image, any other visual<br> 
+        or function bug, describe your problem here:</p>
 
-        <div class="name">
-            <label for="Username">Username</label>
-            <input type="text" id="username" name="username" equired>
+        <form on:submit|preventDefault={onSubmit} name="reporter">
 
-            <label class="emailname" for="E-mail">E-mail</label>
-            <input class="email" type="text" id="email" name="email" required>
-        </div>
+            <div class="name">
+                <label for="Username">Username</label>
+                <input type="text" id="username" name="username" required>
 
-        <div class="problem">
-            <label for="Bug">Describe your problem:</label>
-            <input class="bug" type="text" id="bug" name="bug" required>
-        </div>
-            <input type="submit" value="Submit">
-        
-    </form>
+            </div>
 
+            <div class="problem">
+                <label for="Bug">Describe your problem:</label>
+                <textarea class="bug" type="text" id="bug" name="bug" required></textarea>
+            </div>
+                <input type="submit" value="Submit">
+            
+        </form>
+
+    </div>
 </div>
-
 <style>
 
     .notworking{
@@ -107,6 +120,13 @@
         padding-left: 2.5rem;
     }
 
+    textarea {
+        background-color: gray;
+        border-radius: .5rem;
+        text-align: left;
+        padding: 1rem;
+        margin: 0;
+    }
     @media screen and (max-width: 536px) {
 
    .reportcontainer {
