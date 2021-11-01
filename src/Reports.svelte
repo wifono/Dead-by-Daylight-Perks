@@ -16,11 +16,6 @@
         <Reporter />
     </div>
 
-    <div class="reports">
-        <Report />
-        <Report />
-        <Report />
-    </div>
 </main>
 </body>
 
@@ -38,12 +33,7 @@
          gap: 1rem;
     }
 
-.reports {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 2rem 0 0 0;
-}
+
 
 h1 {
     margin: 1rem;

@@ -1,47 +1,102 @@
 <script>
 
+    const ENTER_KEY = 13;
+    const ESCAPE_KEY = 27;
 
-    const onSubmit = (event) => {
-        const formData = new FormData(event.target);
+    let tempId = "4"
+    let title = "";
+    let username = "";
+    let description = "";
 
-        let data = {};
-            for (let field of formData) {
-                const [key, value] = field;
-                data[key] = JSON.stringify(value);
+    function addReport(event){
+        if(event.which === ENTER_KEY) {
+            reports.push({
+                "id":"tempId",
+                "title": title,
+                "name": username,
+                "description": description,
+            })
 
-                console.log(field);
+        reports = reports;
+        tempId = tempId +++ 1;
+        title = "";
+        username = "";
+        description = "";
+
+        }
+
+        console.log(tempId);
     }
-}
+
+    /*function deleteReport(id) {
+        reports = reports.filter(report => report.id === id);
+    }*/
+
+
+        
+  let reports = [
+      
+  ]
 
 </script>
 
 <div class="reporter">
 
-        <h2 class="notworking">Reports aren't working right now.</h2>
+        
 
     <div class="reportcontainer">
+        <h2 class="notworking">Reports aren't working right now.</h2>
 
         <p>If u find bugs like missing image, any other visual<br> 
         or function bug, describe your problem here:</p>
 
-        <form on:submit|preventDefault={onSubmit} name="reporter">
+        <form on:keydown={addReport}  name="reporter">
 
             <div class="name">
                 <label for="Username">Username</label>
-                <input type="text" id="username" name="username" required>
+                <input bind:value={username} type="text" id="username" name="username" required>
+
+            </div>
+
+            <div class="title">
+                <label for="Title">Title</label>
+                <input bind:value={title}  type="text" id="Title" name="Title" required>
 
             </div>
 
             <div class="problem">
                 <label for="Bug">Describe your problem:</label>
-                <textarea class="bug" type="text" id="bug" name="bug" required></textarea>
+                <textarea bind:value={description} class="bug" type="text" id="bug" name="bug" required></textarea>
             </div>
                 <input type="submit" value="Submit">
             
-        </form>
+        </form> 
 
     </div>
+
+
+<div class="reports">
+
+        {#each reports as report}
+
+            <div class="report">
+                <div class="header">
+                    <h1> {report.title} </h1>
+                    <h2>Reported: {report.name} </h2>
+                </div>
+            
+                <div class="body">
+                    <div class="description">
+                        <p> {report.description} </p>
+                    </div>
+                </div>
+            </div>      
+        {/each}
+       
+    </div>
+
 </div>
+
 <style>
 
     .notworking{
@@ -75,6 +130,22 @@
         box-shadow: 0 0 2rem rgb(12, 12, 12);
 
     }
+
+    .reporter {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 2rem;
+
+    }
+
+    .reports {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 2rem 0 0 0;
+}
 
 
     form {
@@ -155,6 +226,60 @@
        width: 20rem;
    }
 }
+
+
+
+/*_________________________*/
+
+.report {
+        width: 31vw;
+        min-width: 31vw;
+        min-height: 10%;
+
+        background-color: rgb(82, 82, 82);
+        font-family: "Amatic SC", cursive;
+
+        border-radius: 1em;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        margin: 1rem 0 1rem 0;
+
+        box-shadow: 0 0 1rem;
+        text-shadow: 0 0 1rem rgb(31, 31, 31);
+
+
+    }
+
+    .report h1 {
+        font-size: 2rem;
+        padding: 0;
+        margin-bottom: 0;
+        color: rgb(235, 83, 109);
+
+    }
+
+    .header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+
+        width: 90%;
+
+        background: rgb(75, 75, 75);
+        padding: 0 5% 0 5%;
+        border-radius: 1em 1em 0em 0em;
+    }
+
+    .description {
+        font-size: 1.5rem;
+        color: aliceblue;
+
+        padding: 1rem
+    }
 
 @media screen and (max-width: 455px) {
 

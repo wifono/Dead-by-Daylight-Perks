@@ -1,8 +1,7 @@
 <script>
     export {data} from './Reporter.svelte'
-    export {field} from './Reporter.svelte'
-
-    $:username = "hm"
+    export {username} from './Reporter.svelte';
+    
 
 
 
